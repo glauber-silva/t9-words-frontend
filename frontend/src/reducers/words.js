@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
-    words = [],
-    typed = '',
+    words : [],
+    typed : '',
 }
 
 export function wordsReducer(state = INITIAL_STATE, action ){

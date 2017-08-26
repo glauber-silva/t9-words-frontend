@@ -9,6 +9,8 @@ import Routes from './Routes';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
+const store = applyMiddleware(thunk)(createStore)
+
 ReactDOM.render(
     <Provider store={store(reducer)}>
         <Router routes={Routes} history={browserHistory} />
