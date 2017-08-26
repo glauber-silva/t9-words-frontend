@@ -1,0 +1,15 @@
+import React from 'react';
+import Header from './commons/Header';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+export default App;
