@@ -15,9 +15,12 @@
     "redux": "^3.6.0",
     "redux-form": "^6.2.0",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.1.0",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-react-app": "^2.0.0",
+    "eslint-plugin-react": "^7.3.0",
     "react-scripts": "1.0.11"
   },
   "scripts": {
