@@ -1,10 +1,11 @@
 import React from 'react';
+import Labels from './labels';
 
 class Home extends React.Component{
     render(){
         return(
             <div>
-                <h2>HOME AQUI</h2>
+                <Labels/>
             </div>
         )
     }

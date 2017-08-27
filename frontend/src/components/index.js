@@ -1,12 +1,19 @@
 import React from 'react';
-import Header from './commons/Header';
+import { Grid, Row, Col } from 'react-bootstrap';
+import Header from './commons/header';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        {this.props.children}
+      <Grid>
+        <Row>
+          <Col md={4} mdOffset={4} xs={12}>
+          <Header />
+          {this.props.children}
+          </Col>
+        </Row>
+      </Grid>
       </div>
     );
   }

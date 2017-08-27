@@ -8,6 +8,10 @@ import reducer from './reducers';
 import Routes from './Routes';
 import registerServiceWorker from './registerServiceWorker';
 
+import './static/css/bootstrap.min.css';
+import "./static/css/bootstrap-theme.min.css";
+import "./static/css/base.css";
+
 const store = applyMiddleware(thunk)(createStore)
 
 ReactDOM.render(
