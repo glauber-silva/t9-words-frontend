@@ -8,10 +8,9 @@ NAVBAR
 /*
 * Content
 */
+
 .jumbotron {
     padding: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
 }
 
 /*
@@ -20,11 +19,32 @@ NAVBAR
 select[multiple]{
     height: 50px;
 }
-
+/*
+* Numpad
+*/
+.buttons{
+    margin: auto;
+}
+.numpad{
+    margin-top: -20px;
+}
+.btn{
+    min-height: 61px;
+}
+.num{
+    font-size: 35px;
+}
 
 @media screen and (min-width:768px){
     .jumbotron {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width:400px){
+    .jumbotron {
+        padding-right: 30px;
+        padding-left: 30px;
     }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Well } from 'react-bootstrap';
+import { FormGroup, FormControl  } from 'react-bootstrap';
 
 class LabelNum extends React.Component{
     render(){
         return(
-            <Well>
-                NUMBERS HERE
-            </Well>
+        <FormGroup bsSize="large">
+            <FormControl type="tel" />
+        </FormGroup>
         )
     }
 
