@@ -5,9 +5,8 @@ class LabelWords extends React.Component{
     render(){
         return(
             <FormGroup controlId="formControlsSelectMultiple">
-            <ControlLabel>Multiple select</ControlLabel>
+            <ControlLabel>Words</ControlLabel>
             <FormControl componentClass="select" multiple>
-                <option value="select">select (multiple)</option>
                 <option value="other">...</option>
             </FormControl>
             </FormGroup>
