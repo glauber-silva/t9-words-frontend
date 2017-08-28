@@ -1,5 +1,5 @@
 import { combineReducers}  from 'redux';
-import { wordsReducer } from './words.js';
+import { wordsReducer } from './tnine_reducer.js';
 
 const rootReducer = combineReducers({
     words : wordsReducer

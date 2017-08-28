@@ -1,13 +1,13 @@
 const INITIAL_STATE = {
     words : [],
-    typed : '',
+    typed : ""
 }
 
 export function wordsReducer(state = INITIAL_STATE, action ){
     switch(action.type){
-        case 'FETH_WORDS':
+        case 'FETCH_NUMS':
             return{...state,
-                words: state.words.concat([action.payload])
+                typed: state.typed + action.payload
             }
         default:
             return state
