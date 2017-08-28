@@ -1,22 +1,18 @@
 
 import { onSuccess, onError } from './index';
+import axios from 'axios';
 
 export function combination(str){
-    let fn = function(active, rest, a){
-        if(!active && !rest)
-            return;
-        if(!rest){
-            a.push(active)
-        } else {
-            fn(active + rest[0],rest.slice(1),a);
-            fn(active, rest.slice(1),a);
-        }
-        return a;
-    }
-    let comb = fn("",str,[]);
-    console.log("Actions | Combinations ", comb);
+
     return function(dispatch){
-        dispatch(onSuccess("FETCH_WORDS", comb))
+        axios.get("http://localhost:8080/words/"+str)
+        .then((response) => {
+            console.log("Response", response);
+            dispatch(onSuccess("FETCH_WORDS", response.data))
+        })
+        .catch((err) => {
+          dispatch(onError('FETCH_WORDS_ERR', err.response.data.error))
+      })
     }
 }
 
