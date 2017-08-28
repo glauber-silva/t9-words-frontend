@@ -34,3 +34,10 @@ export function inputLetters(str){
         dispatch(combination(str));
     }
 }
+
+export function clearState(){
+    return{
+        type: "RESET_STATE",
+        payload:''
+    }
+}

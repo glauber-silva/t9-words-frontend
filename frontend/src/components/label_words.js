@@ -3,12 +3,19 @@ import { connect } from 'react-redux';
 import {FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 class LabelWords extends React.Component{
+    buildOptions(){
+        return this.props.words.map((n, index) => {
+                return(
+                    <option key={index} value={n}>{n}</option>
+                )
+            })
+    }
     render(){
         return(
             <FormGroup controlId="formControlsSelectMultiple">
             <ControlLabel>Words</ControlLabel>
             <FormControl componentClass="select" multiple>
-                <option value="other">...</option>
+                {this.buildOptions()}
             </FormControl>
             </FormGroup>
         )

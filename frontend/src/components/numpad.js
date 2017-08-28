@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Row, Col } from 'react-bootstrap';
-import { inputNum, inputLetters } from '../actions/tnine_actions.js';
+import { Row, Col, Button } from 'react-bootstrap';
+import { inputNum, inputLetters, clearState } from '../actions/tnine_actions.js';
 
 class Numpad extends React.Component{
     constructor(props){
@@ -15,6 +15,10 @@ class Numpad extends React.Component{
         this.setState({letters:letters});
         this.props.inputNum(num);
         this.props.inputLetters(letters);
+    }
+    clearState(){
+        this.setState({letters:""});
+        this.props.clearState();
     }
     render(){
         return(
@@ -83,9 +87,13 @@ class Numpad extends React.Component{
                         <p>&nbsp;</p>
                     </Col>
                 </Row>
-
+                <Row className="buttons">
+                    <Col className="btn btn-warning" md={12} xs={12} onClick={ () => this.clearState()}>
+                        <p> CLEAR </p>
+                    </Col>
+                </Row>
             </div>
         )
     }
 }
-export default connect(null,{inputNum, inputLetters})(Numpad);
+export default connect(null,{inputNum, inputLetters, clearState})(Numpad);

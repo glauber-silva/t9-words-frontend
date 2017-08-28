@@ -20,6 +20,12 @@ export function wordsReducer(state = INITIAL_STATE, action ){
             return{...state,
                 words: action.payload
             }
+        case 'RESET_STATE':
+            return{...state,
+                words: [],
+                typedNums: "",
+                typedLetters: ""
+            }
         default:
             return state
     }
