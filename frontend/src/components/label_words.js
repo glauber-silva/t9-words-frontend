@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 class LabelWords extends React.Component{
@@ -14,4 +15,10 @@ class LabelWords extends React.Component{
     }
 
 }
-export default LabelWords;
+
+function mapStateToProps(state){
+    return{
+        words: state.words.words
+    }
+}
+export default connect(mapStateToProps,{})(LabelWords);

@@ -27,7 +27,7 @@ class LabelNum extends React.Component{
 
 function mapStateToProps(state){
     return{
-        typed: state.words.typed
+        typed: state.words.typedNums
     }
 }
 export default connect(mapStateToProps,{})(LabelNum);
